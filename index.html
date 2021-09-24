@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="design.css" />
+    <title>YOUSER</title>
+  </head>
+  <body>
+    <div class="app">
+      <main id="main">
+        <h1 class="bold mb-1">YOUSER</h1>
+        <div class="users-list" id="users-list">
+          <div class="user card hoverable">
+            <img class="user__img" src="https://i.pravatar.cc/500?img=1" alt="default-user-img" />
+            <div class="main__info"><span class="light">ID# 1 </span>- Default User</div>
+            <div class="focus__content light">
+              <p>Name: Default User</p>
+              <p>Email: email-7323@email.com</p>
+              <p class="capitalize">Status: active</p>
+            </div>
+          </div>
+        </div>
+      </main>
+      <div id="modal-wrapper" class="modal-wrapper wrapper hide" >
+        <form class="modal__form" id="modal-form">
+          <div class="form__group mb-1">
+            <label class="bold mb-1">Name: </label>
+            <input id="name-input" name="name" type="text" placeholder="John Doe" required/>
+          </div>
+          <div class="form__group mb-1">
+            <label class="bold mb-1">Email: </label>
+            <input id="email-input" type="email" type="email" placeholder="john_doe@mymail.com" required>
+          </div>
+          <div class="form__group mb-1">
+            <label class="bold mb-1">Gender: </label>
+            <input id="gender-input" type="gender" type="text" placeholder="Male/Female" required>
+          </div>
+          <button type="submit" class="btn bold form__btn hoverable" id="submit-btn">Submit</button>
+        </form>
+      </div>
+      <div id="loader-wrapper" class="loader-wrapper wrapper hide" >
+        <div class="lds-ring">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="loader__text">Validating inputs...</div>
+      </div>  
+      <div id="request-feedback" class="request-feedback">A new YOUSER added</div>
+      <nav class="nav-bottom hoverable" id="nav">
+        <h2>Add a User</h2>
+        <i class="fas fa-angle-double-up"></i>
+      </nav>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
