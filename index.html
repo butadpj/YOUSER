@@ -30,8 +30,8 @@
           </div>
         </div>
       </main>
-      <div id="modal-wrapper" class="modal-wrapper wrapper hide" >
-        <form class="modal__form" id="modal-form">
+      <div id="modalWrapper" class="modal-wrapper wrapper hide" >
+        <form class="modal__form" id="modalForm">
           <div class="form__group mb-1">
             <label class="bold mb-1">Name: </label>
             <input id="name-input" name="name" type="text" placeholder="John Doe" required/>
@@ -47,7 +47,7 @@
           <button type="submit" class="btn bold form__btn hoverable" id="submit-btn">Submit</button>
         </form>
       </div>
-      <div id="loader-wrapper" class="loader-wrapper wrapper hide" >
+      <div id="loaderWrapper" class="loader-wrapper wrapper hide" >
         <div class="lds-ring">
           <div></div>
           <div></div>
@@ -56,12 +56,13 @@
         </div>
         <div class="loader__text">Validating inputs...</div>
       </div>  
-      <div id="request-feedback" class="request-feedback">A new YOUSER added</div>
+      <div id="requestFeedback" class="request-feedback">A new YOUSER added</div>
       <nav class="nav-bottom hoverable" id="nav">
         <h2>Add a User</h2>
         <i class="fas fa-angle-double-up"></i>
       </nav>
     </div>
-    <script src="script.js"></script>
+    <script type="module" src="js/navbar.js"></script>
+    <script type="module" src="js/modal.js"></script>
   </body>
 </html>
