@@ -4,6 +4,10 @@ import { addNewUser } from './dom.js';
 import { fetchMethod } from './fetch_method.js';
 import { showLoader, hideLoader } from './loader.js';
 
+// SELECTORS
+const modalWrapper = document.getElementById('modalWrapper');
+const modalForm = document.getElementById('modalForm');
+
 // FUNCTIONS
 export const hideModal = () => {
   modalWrapper.classList.add('hide');
@@ -54,8 +58,9 @@ const submitForm = (event) => {
 }
 
 // LISTENERS
-modalForm.addEventListener('submit', (event) => submitForm(event));
-
 modalWrapper.addEventListener('click', (event) => {
   if (!modalForm.contains(event.target)) hideModal();
 });
+
+modalForm.addEventListener('submit', (event) => submitForm(event));
+

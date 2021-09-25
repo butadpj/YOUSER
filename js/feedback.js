@@ -1,3 +1,6 @@
+// SELECTORS
+let requestFeedback = document.getElementById('requestFeedback');
+
 // FUNCTIONS
 export const showRequestFeedback = (status, errors = {}) => {
   if (status === 'success') {

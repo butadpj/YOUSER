@@ -30,7 +30,15 @@ const createAndInsertUserImage = ({name}, parentContainer) => {
   parentContainer.prepend(userImg);
 }
 
-const createAndInsertUserDetails = ({id, name, email, status}, parentContainer) => {
+const createAndInsertUserDetails = (
+  {
+    id, 
+    name, 
+    email, 
+    status
+  }, 
+  parentContainer
+  ) => {
   const userDetailsContainer = document.createElement('DIV');
   userDetailsContainer.classList.add('main__info');
   userDetailsContainer.innerHTML = `
