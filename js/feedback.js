@@ -1,8 +1,9 @@
 // SELECTORS
 let requestFeedback = document.getElementById('requestFeedback');
+//
 
 // FUNCTIONS
-export const showRequestFeedback = (status, errors = {}) => {
+const showRequestFeedback = (status, errors = {}) => {
   if (status === 'success') {
     requestFeedback.textContent = 'A new YOUSER added';
   } else if (status === 'failed') {
@@ -19,6 +20,10 @@ export const showRequestFeedback = (status, errors = {}) => {
     setTimeout(hideRequestFeedback, 2500);
 }
 
-export const hideRequestFeedback = () => {
+const hideRequestFeedback = () => {
   requestFeedback.classList.remove('request-feedback--show');
 }
+//
+
+// EXPOSE
+export { showRequestFeedback, hideRequestFeedback }

@@ -1,11 +1,16 @@
 // SELECTORS
 const loaderWrapper = document.getElementById('loaderWrapper');
+//
 
 // FUNCTIONS
-export const showLoader = () => {
+const showLoader = () => {
   loaderWrapper.classList.remove('hide');
 }
 
-export const hideLoader = () => {
+const hideLoader = () => {
   loaderWrapper.classList.add('hide');
 }
+//
+
+// EXPOSE
+export { showLoader, hideLoader }

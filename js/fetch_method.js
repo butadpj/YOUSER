@@ -1,4 +1,12 @@
-export const fetchMethod = (url, data, method) => {
+// FUNCTIONS
+const getMethod = (url, callBackFunction) => {
+  fetch(url)
+  .then(response => response.json())
+  .then(result => callBackFunction(result))
+  .catch(error => console.log(error));
+}
+
+const postMethod = (url, data, callBackFunction) => {
   fetch(url, {
     method: 'POST',
     headers: {
@@ -8,7 +16,15 @@ export const fetchMethod = (url, data, method) => {
     body: JSON.stringify(data)
   })
   .then(response => response.json())
-  .then(result => method(result))
+  .then(result => callBackFunction(result))
   .catch(error => console.log(error));
 }
+//
 
+const fetchMethod = {
+  get: getMethod,
+  post: postMethod,
+}
+
+// EXPOSE
+export default fetchMethod

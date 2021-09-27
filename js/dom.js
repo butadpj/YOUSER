@@ -1,8 +1,9 @@
 // IMPORTS
 import { showRequestFeedback } from "./feedback.js";
+//
 
 // FUNCTIONS
-export const addNewUser = (data) => {
+const addNewUser = (data) => {
   const usersListContainer = document.getElementById('users-list');
   const errors = data[0]; 
 
@@ -64,4 +65,7 @@ const createAndInsertUserDetails = (
 
   parentContainer.appendChild(focusContentContainer);
 }
+//
 
+// EXPOSE
+export { addNewUser }
