@@ -13,15 +13,20 @@ const fieldErrorMessage = (field) => {
 }
 
 const showRequestFeedback = (status, errors = {}) => {
-  if (status === 'success') 
+  const feedBackShowTime = 3000; // milliseconds
+
+  if (status === 'success') {
+    requestFeedback.classList.remove('request-feedback--danger');
     requestFeedback.textContent = 'A new YOUSER added';
+  }
 
   if (status === 'failed') {
+    requestFeedback.classList.add('request-feedback--danger');
     requestFeedback.textContent = fieldErrorMessage(errors.field);
   }
     
   requestFeedback.classList.add('request-feedback--show');
-  setTimeout(hideRequestFeedback, 2500);
+  setTimeout(hideRequestFeedback, feedBackShowTime);
 }
 
 const hideRequestFeedback = () => {

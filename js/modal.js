@@ -21,7 +21,7 @@ const showModal = () => {
   document.body.style.overflow = 'hidden';
 }
 
-const createNewUser = ({name, gender, email}) => {
+const createNewUser = async ({name, gender, email}) => {
   showLoader();
 
   const usersData = {
@@ -37,7 +37,6 @@ const createNewUser = ({name, gender, email}) => {
     (result) => {
       const data = result.data; // data[0] is the errors
       addNewUser(data);
-      hideModal();
       hideLoader();
     }
   );

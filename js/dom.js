@@ -1,4 +1,5 @@
 // IMPORTS
+import { hideModal } from "./modal.js";
 import { showRequestFeedback } from "./feedback.js";
 //
 
@@ -7,10 +8,18 @@ const addNewUser = (data) => {
   const usersListContainer = document.getElementById('users-list');
   const errors = data[0]; 
 
-  if (!errors) {
-    createAndInsertUserContainer(data, usersListContainer);
-    showRequestFeedback('success');
-  } else showRequestFeedback('failed', errors); 
+  if (errors) {
+    showRequestFeedback('failed', errors);
+    return;
+  };
+
+  // If there's no error -> 
+  // 1. Create and insert new user to dom
+  // 2. Show feedback (success)
+  // 3. Hide modal
+  createAndInsertUserContainer(data, usersListContainer);
+  showRequestFeedback('success'); 
+  hideModal();
 }
 
 const createAndInsertUserContainer = (usersData, parentContainer) => {
