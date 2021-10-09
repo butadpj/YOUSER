@@ -251,6 +251,12 @@ nav i {
   color: var(--dark);
   padding: 1rem 0;
   transition: top 0.35s ease-out;
+  z-index: 2;
+}
+
+.request-feedback--danger {
+  background: var(--accent);
+  color: var(--light);
 }
 
 .request-feedback--show {
